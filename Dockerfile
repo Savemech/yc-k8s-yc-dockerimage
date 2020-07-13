@@ -1,4 +1,9 @@
 FROM alpine:latest
+
+LABEL maintainer="Anton Strukov"
+LABEL github="https://github.com/Savemech/yc-k8s-yc-dockerimage"
+LABEL purpose="Run tasks from CI/CD/k8s/other systems, without humans"
+
 RUN \
 apk -U add --no-cache --virtual .build-deps python3 git curl bash && \
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
