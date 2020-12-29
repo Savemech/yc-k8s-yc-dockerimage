@@ -1,13 +1,13 @@
 FROM alpine:latest
 
-ARG toolbox_version=0.6
+ARG toolbox_version=0.7
 LABEL maintainer="Anton Strukov"
 LABEL github="https://github.com/Savemech/yc-k8s-yc-dockerimage"
 LABEL purpose="Run tasks from CI/CD/k8s/other systems, without humans"
 #https://github.com/GoogleCloudPlatform/cloud-sdk-docker/blob/master/alpine/Dockerfile
 LABEL image="savemech/kubectl-yc-helm-gcloud-toolbox:latest"
 LABEL image=savemech/kubectl-yc-helm-gcloud-toolbox:${toolbox_version}
-ARG CLOUD_SDK_VERSION=319.0.0
+ARG CLOUD_SDK_VERSION=321.0.0
 
 ENV PATH /google-cloud-sdk/bin:$PATH
 ENV PATH /root/google-cloud-sdk/bin:$PATH
